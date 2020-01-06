@@ -184,24 +184,5 @@ public class play extends AppCompatActivity {
         generateQuestion();
     }
 
-    class MyCountDownTimer extends CountDownTimer{
-        public MyCountDownTimer(long startTime, long interval){
-            super(startTime,interval);
-        }
-
-        @Override
-        public void onTick(long millisUntilFinished) {
-            text.setText(""+millisUntilFinished/1000);
-        }
-
-        @Override
-        public void onFinish() {
-            String jumlahskor = String.valueOf(skor);
-            Intent i = new Intent(play.this, HasilPenilaian.class);
-            i.putExtra("skorAkhir", jumlahskor);
-            i.putExtra("activity","TrueFalseQuestion");
-            play.this.finish();
-            startActivity(i);
-        }
-    }
+    
 }
