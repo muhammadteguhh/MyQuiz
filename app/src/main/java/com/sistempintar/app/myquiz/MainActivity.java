@@ -43,11 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void play() {
-        Intent pindah = new Intent(this, play.class);
-        MainActivity.this.finish();
-        startActivity(pindah);
-    }
+    
 
     public void about() {
         Intent pindah = new Intent(this, about.class);
@@ -55,6 +51,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(pindah);
     }
 
-    
+    public void exit() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Do you want exit?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                MainActivity.this.finish();
+            }
+        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        }).show();
+    }
 
 }
