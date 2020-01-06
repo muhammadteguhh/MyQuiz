@@ -10,9 +10,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class HasilPenilaian extends AppCompatActivity {
-    TextView mtvHasilAkhir;
-    Button mbtnMenu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,11 @@ public class HasilPenilaian extends AppCompatActivity {
         });
     }
 
-    
+    public void setSkor(){
+        String skorPil = getIntent().getStringExtra("skorAkhir");
+
+        mtvHasilAkhir.setText("Nilai: "+skorPil);
+    }
 
     public void onBackPressed(){
         Toast.makeText(this, "Tidak bisa kembali, silahkan tekan beranda", Toast.LENGTH_SHORT).show();
