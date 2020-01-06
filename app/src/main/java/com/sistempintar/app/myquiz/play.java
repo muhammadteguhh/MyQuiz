@@ -34,36 +34,7 @@ public class play extends AppCompatActivity {
 
     boolean topTrue;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play);
-
-        for (int i=0;i<10;i++){
-            norepeat.add(i);
-        }
-        botButton = findViewById(R.id.botButton);
-        topButton = findViewById(R.id.topButton);
-        botButton2 = findViewById(R.id.botButton2);
-        topButton2 = findViewById(R.id.topButton2);
-
-        resultTextView = findViewById(R.id.resultTextView);
-        soalTextView = findViewById(R.id.soalTextView);
-
-        mtvSkor = (TextView) findViewById(R.id.tvSkor);
-        resultTextView.setText("");
-        initializeQuestion();
-
-        text = findViewById(R.id.timer);
-        countDownTimer = new MyCountDownTimer(startTime,interval);
-        text.setText(text.getText()+String.valueOf(startTime/1000));
-        if (timeHasStarted==true){
-            countDownTimer.start();
-        }
-        else if (timeHasStarted==false){
-            countDownTimer.cancel();
-        }
-    }
+    
     public void initializeQuestion()
     {
 
