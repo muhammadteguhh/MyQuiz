@@ -93,7 +93,7 @@ public class play extends AppCompatActivity {
             mtvSkor.setText(""+skor);
             String jumlahskor = String.valueOf(skor);
             Intent i = new Intent(play.this, HasilPenilaian.class);
-            i.putExtra("skorAkhir", jumlahskor);
+          
             i.putExtra("activity","TrueFalseQuestion");
             play.this.finish();
             startActivity(i);
