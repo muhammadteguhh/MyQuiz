@@ -81,8 +81,8 @@ public class play extends AppCompatActivity {
 
         generateQuestion();
     }
-
     public void tampil_soal(){
+
         soalTextView.setText(currentQuestion.soal);
     }
 
