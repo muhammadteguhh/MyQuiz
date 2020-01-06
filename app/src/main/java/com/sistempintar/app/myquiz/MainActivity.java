@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+public class MainActivity extends AppCompatActivity {
+    Button play;
+    Button about;
+    Button exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,19 +55,6 @@ import android.widget.Toast;
         startActivity(pindah);
     }
 
-    public void exit() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want exit?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                MainActivity.this.finish();
-            }
-        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-            }
-        }).show();
     }
 
 }
