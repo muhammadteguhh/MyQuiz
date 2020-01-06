@@ -142,7 +142,19 @@ public class play extends AppCompatActivity {
         generateQuestion();
     }
 
-    
+    public void setTopButton2Clicked(View e)
+    {
+        if (topTrue == false)
+        {
+
+            resultTextView.setText("Jawaban Benar");
+        }
+        else
+        {
+            resultTextView.setText("Jawaban Salah");
+        }
+        generateQuestion();
+    }
 
     public void setBotButton2Clicked(View e)
     {
