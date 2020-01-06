@@ -86,6 +86,45 @@ public class play extends AppCompatActivity {
         soalTextView.setText(currentQuestion.soal);
     }
 
+    public void generateQuestion()
+    {
+        if (batas>=10){
+            norepeat.add(0);
+            mtvSkor.setText(""+skor);
+            String jumlahskor = String.valueOf(skor);
+            Intent i = new Intent(play.this, HasilPenilaian.class);
+            i.putExtra("skorAkhir", jumlahskor);
+            i.putExtra("activity","TrueFalseQuestion");
+            play.this.finish();
+            startActivity(i);
+        }
+        else{
+            batas++;
+        }
+        pr = (int)(Math.random()*(norepeat.size()-1));
+        randomQuestionIndex = norepeat.get(pr);
+        currentQuestion = questions.get((randomQuestionIndex+1)%10);
+        tampil_soal();
+        mtvSkor.setText(""+skor);
+        if (Math.random() > 0.5)
+        {
+            topTrue = true;
+            skor = skor +2;
+            topButton.setText(currentQuestion.trueStatement);
+            botButton.setText(currentQuestion.falseStatement);
+            topButton2.setText(currentQuestion.falseStatement2);
+            botButton2.setText(currentQuestion.falseStatement3);
+
+        }
+        else
+        {
+            topTrue = false;
+            topButton2.setText(currentQuestion.falseStatement3);
+            botButton2.setText(currentQuestion.falseStatement2);
+            topButton.setText(currentQuestion.falseStatement);
+            botButton.setText(currentQuestion.trueStatement);
+        }
+        norepeat.remove(pr);
 
     }
 
