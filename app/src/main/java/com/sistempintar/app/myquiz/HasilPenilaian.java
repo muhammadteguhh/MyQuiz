@@ -10,6 +10,9 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+public class HasilPenilaian extends AppCompatActivity {
+    TextView mtvHasilAkhir;
+    Button mbtnMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
