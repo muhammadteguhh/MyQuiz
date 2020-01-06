@@ -74,17 +74,15 @@ public class play extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            
+            e.printStackTrace();
         }
 
         questions = TrueFalseQuestion.parseJSONArray(response);
 
         generateQuestion();
     }
-    public void tampil_soal(){
 
-        soalTextView.setText(currentQuestion.soal);
-    }
+    
 
     public void generateQuestion()
     {
