@@ -128,7 +128,61 @@ public class play extends AppCompatActivity {
 
     }
 
-    
+    public void setTopButtonClicked(View e)
+    {
+        if (topTrue == true)
+        {
+            resultTextView.setText("Jawaban Benar");
+        }
+        else
+        {
+            resultTextView.setText("SALAH!");
+
+        }
+        generateQuestion();
+    }
+
+    public void setTopButton2Clicked(View e)
+    {
+        if (topTrue == false)
+        {
+
+            resultTextView.setText("Jawaban Benar");
+        }
+        else
+        {
+            resultTextView.setText("Jawaban Salah");
+        }
+        generateQuestion();
+    }
+
+    public void setBotButton2Clicked(View e)
+    {
+        if (topTrue == false)
+        {
+            resultTextView.setText("Jawaban Benar");
+        }
+        else
+        {
+            resultTextView.setText("Jawaban Salah");
+
+        }
+        generateQuestion();
+    }
+
+    public void setBotButtonClicked(View e)
+    {
+        if (topTrue == false)
+        {
+            resultTextView.setText("Jawaban Benar");
+        }
+        else
+        {
+            resultTextView.setText("Jawaban Salah");
+
+        }
+        generateQuestion();
+    }
 
     class MyCountDownTimer extends CountDownTimer{
         public MyCountDownTimer(long startTime, long interval){
