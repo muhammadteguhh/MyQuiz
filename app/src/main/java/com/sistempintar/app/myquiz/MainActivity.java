@@ -43,11 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void play() {
-        Intent pindah = new Intent(this, play.class);
-        MainActivity.this.finish();
-        startActivity(pindah);
-    }
+    
 
     public void about() {
         Intent pindah = new Intent(this, about.class);
