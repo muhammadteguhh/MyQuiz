@@ -74,7 +74,7 @@ public class play extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            e.printStackTrace();
+            
         }
 
         questions = TrueFalseQuestion.parseJSONArray(response);
