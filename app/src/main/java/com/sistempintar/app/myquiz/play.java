@@ -10,6 +10,30 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+public class play extends AppCompatActivity {
+
+    private CountDownTimer countDownTimer;
+    private boolean timeHasStarted = true;
+    public TextView text;
+    private final long startTime = 20*1000;
+    private final long interval = 1*1000;
+
+    int skor = 0;
+    int batas=0;
+    int pr = 0;
+    int randomQuestionIndex;
+
+    Button botButton, topButton, botButton2, topButton2;
+    TextView resultTextView, mtvSkor;
+    TextView soalTextView;
+
+    ArrayList<TrueFalseQuestion> questions = new ArrayList<TrueFalseQuestion>();
+    ArrayList<Integer> norepeat = new ArrayList<>(11);
+
+    TrueFalseQuestion currentQuestion;
+
+    boolean topTrue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,12 +5,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class TrueFalseQuestion {
-
-    int id;
-    String trueStatement;
-    String falseStatement, falseStatement2, falseStatement3, soal;
-    String explanation;
 
     public static ArrayList<TrueFalseQuestion> parseJSONArray(String jsonObjectArray)
     {
